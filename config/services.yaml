@@ -1,0 +1,99 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Calendar:
+    - My Calendar:
+        widget:
+          type: calendar
+          firstDayInWeek: sunday
+          view: monthly
+          maxEvents: 10
+          showTime: true
+          timezone: America/New_York
+          integrations: 
+            - type: sonarr
+              service_group: My Network
+              service_name: Sonarr
+              color: orange
+              params:
+                unmonitored: true
+            - type: radarr
+              service_group: My Network
+              service_name: Radarr
+              color: green
+              params:
+                unmonitored: true
+            - type: ical # Show calendar events from another service
+              url: # https://outlook.office365.com/owa/calendar/              
+              name: My Events # required - name for these calendar events
+              color: zinc # optional - defaults to pre-defined color for the service (zinc for ical)
+              params: # optional - additional params for the service
+        showName: true # optional - show name before event title in event line - defaults to false
+- Media:
+    - Immich:
+        icon: immich.svg
+        href: http://1.1.1.1:2283/
+        description: Immich is awesome
+    - Jellyfin:
+        icon: jellyfin.svg
+        href: http://1.1.1.1:8096/
+        description: Media Player
+        widget:
+          type: jellyfin
+          url: http://1.1.1.1:8096
+          key: abcd1234lolyouthought
+          enableBlocks: true
+          enableNowPlaying: true 
+    - Seerr:
+        icon: jellyseerr.svg
+        href: http://1.1.1.1:5055
+        description: Media Requests
+        widget:
+          type: jellyseerr
+          url: http://1.1.1.1:5055
+          key: abcd1234lolyouthought
+
+- My Network:
+    - My qBittorrent:
+        icon: qbittorrent.svg
+        href: http://1.1.1.1:8080/
+        description: qBittorrent is good?
+    - Radarr:
+        icon: radarr.svg
+        href: http://1.1.1.1:7878
+        description: Movie Pull Automation
+        widget:
+          type: radarr
+          url: http://1.1.1.1:7878
+          key: abcd1234lolyouthought
+          enableQueue: false
+    - Sonarr:
+        icon: sonarr.svg
+        href: http://1.1.1.1:8989
+        description: TV Pull Automation
+        widget:
+          type: sonarr
+          url: http://1.1.1.1:8989
+          key: abcd1234lolyouthought
+          enableQueue: false
+    
+
+- My Automations:
+    - Bazarr:
+        icon: bazarr.svg
+        href: http://1.1.1.1:6767
+        description: Subtitle Pull Automation
+        widget:
+          type: bazarr
+          url: http://1.1.1.1:6767
+          key: abcd1234lolyouthought
+    - Prowlarr:
+        icon: prowlarr.svg
+        href: http://1.1.1.1:9696
+        description: Index Pull Automation
+        widget:
+          type: prowlarr
+          url: http://1.1.1.1:9696
+          key: abcd1234lolyouthought
+          enableQueue: false

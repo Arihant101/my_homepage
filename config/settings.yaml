@@ -1,0 +1,19 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/settings/
+title: Arihant's Homepage
+headerStyle: clean
+theme: dark
+color: purple
+useEqualHeights: true
+
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: true
+  showSearchSuggestions: true
+  hideVisitURL: true
+hideVersion: false
+
+providers:
+  openweathermap: abcd1234lolyouthought
+  weatherapi: abcd1234lolyouthought

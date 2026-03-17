@@ -1,0 +1,37 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Developer:
+    - Github:
+        - icon: github.svg
+          href: https://github.com/Arihant101
+          description: My GitHub
+    - Gemini:
+        - icon: google-gemini.svg
+          href: https://gemini.google.com/app
+          description: GeminiSlay!!
+
+- Social:
+    - Discord:
+        - icon: discord.svg
+          href: https://discord.com/@me
+          description: Free Nitro!
+    - Claude:
+        - icon: claude-ai.svg
+          href: https://claude.ai/new
+          description: Smart-AI
+
+- Entertainment:
+    - YouTube:
+        - icon: youtube.svg
+          href: https://youtube.com/feed/subscriptions
+          description: YT subscriptions
+    - Reddit:
+        - icon: reddit.svg
+          href: https://reddit.com/
+          description: Doomscroll? or Information?
+    - Twitch:
+        - icon: twitch.svg
+          href: https://twitch.tv/
+          description: Streams
